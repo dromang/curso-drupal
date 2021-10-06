@@ -1,0 +1,15 @@
+uuid: d1d8c695-4dae-4a8f-9988-2d603dd938eb
+langcode: es
+status: true
+dependencies: {  }
+name: re
+label: 'Receta full'
+effects:
+  2f22038a-3a6d-477a-8d97-d039543e68cf:
+    uuid: 2f22038a-3a6d-477a-8d97-d039543e68cf
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 500
+      anchor: center-center

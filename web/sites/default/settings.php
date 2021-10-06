@@ -783,8 +783,11 @@ $settings['entity_update_backup'] = TRUE;
  * complete node migrations. Set this to TRUE to force the use of the classic
  * node migrations.
  */
-$settings['migrate_node_migrate_type_classic'] = FALSE;
 
+$settings['migrate_node_migrate_type_classic'] = FALSE;
+/**
+ * nueva linea
+ */
 /**
  * Load local development override configuration, if available.
  *
@@ -811,7 +814,7 @@ $databases['default']['default'] = [
     'prefix' => '',
 ];
 
-$settings['config_sync_directory'] = '/mnt/files/config/sync_dir';
+$settings['config_sync_directory'] = '/var/www/html/config/default';
 $settings['hash_salt'] = 'dpj2NSjfSj4md1Hx';
 
 $settings['trusted_host_patterns'] = array(
@@ -825,7 +828,7 @@ $settings['trusted_host_patterns'] = array(
     'prefix' => '',
 ];
 
-$settings['config_sync_directory'] = '/mnt/files/config/sync_dir';
+$settings['config_sync_directory'] = '/var/www/html/config/default';
 $settings['hash_salt'] = 'cIEDeJsLsCHZF3NI';
 
 $settings['trusted_host_patterns'] = array(

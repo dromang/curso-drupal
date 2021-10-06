@@ -1,0 +1,23 @@
+uuid: d081d174-2d2d-4be6-babe-533fd3f4166f
+langcode: es
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - cocina
+_core:
+  default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
+id: cocina_search
+theme: cocina
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Buscar
+  provider: search
+  label_display: visible
+  page_id: node_search
+visibility: {  }

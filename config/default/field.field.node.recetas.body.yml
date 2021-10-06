@@ -1,0 +1,23 @@
+uuid: bf4302fb-9830-42bc-b922-5959f225aa01
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.recetas
+  module:
+    - text
+id: node.recetas.body
+field_name: body
+entity_type: node
+bundle: recetas
+label: Descripcion
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

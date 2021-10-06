@@ -1,0 +1,22 @@
+uuid: 0d995bf0-12a0-4da7-ae72-dc60e8a89090
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cocina
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: cocina_breadcrumbs
+theme: cocina
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  provider: system
+  label_display: '0'
+visibility: {  }

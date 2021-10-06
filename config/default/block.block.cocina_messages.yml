@@ -1,0 +1,22 @@
+uuid: b1de5b95-fee9-40da-aed7-f446cbb3fa2c
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cocina
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: cocina_messages
+theme: cocina
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  provider: system
+  label_display: '0'
+visibility: {  }

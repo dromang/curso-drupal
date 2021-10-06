@@ -1,0 +1,20 @@
+uuid: e346d636-b663-4148-a1f4-4f2eccd9a678
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tiempo_de_realizacion
+field_name: field_tiempo_de_realizacion
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,153 @@
+uuid: 3df40caf-d8c8-4e58-b475-7d38c398132d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.recetas.body
+    - field.field.node.recetas.field_autor
+    - field.field.node.recetas.field_categoria
+    - field.field.node.recetas.field_fecha
+    - field.field.node.recetas.field_imagen
+    - field.field.node.recetas.field_ingredientes
+    - field.field.node.recetas.field_tiempo_de_realizacion
+    - image.style.thumbnail
+    - node.type.recetas
+  module:
+    - datetime
+    - field_group
+    - image
+    - text
+third_party_settings:
+  field_group:
+    group_group_1:
+      children:
+        - title
+        - body
+        - field_imagen
+      parent_name: ''
+      weight: 0
+      format_type: details
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'group 1'
+    group_group_2:
+      children:
+        - field_ingredientes
+        - field_categoria
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'group 2'
+    group_group_3:
+      children:
+        - field_fecha
+        - field_tiempo_de_realizacion
+        - field_autor
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'group 3'
+id: node.recetas.default
+targetEntityType: node
+bundle: recetas
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_autor:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_categoria:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_fecha:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_imagen:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_ingredientes:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tiempo_de_realizacion:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
