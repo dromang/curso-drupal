@@ -783,8 +783,11 @@ $settings['entity_update_backup'] = TRUE;
  * complete node migrations. Set this to TRUE to force the use of the classic
  * node migrations.
  */
-$settings['migrate_node_migrate_type_classic'] = FALSE;
 
+$settings['migrate_node_migrate_type_classic'] = FALSE;
+/**
+ * nueva linea
+ */
 /**
  * Load local development override configuration, if available.
  *
