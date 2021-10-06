@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+ .navbar-brand img {
+  max-width: 5% ;
+}
+.header__top .region-secondary-menu{
+  width: 100%;
+}
+
+
+.header__top .region-secondary-menu .menu--account > .nav{
+  justify-content: flex-end;
+}
+img {
+  max-width: 100%;
+}
+h2.subtitle {
+  color:red;
+  font-size: 24px;
+}
