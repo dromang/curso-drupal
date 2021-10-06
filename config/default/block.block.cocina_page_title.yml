@@ -1,0 +1,20 @@
+uuid: 15de4fdd-8a18-43c7-830a-52ad0b601a09
+langcode: es
+status: true
+dependencies:
+  theme:
+    - cocina
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: cocina_page_title
+theme: cocina
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: a66a3116-2899-40bf-81b1-a07f1489b49b
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - cocina
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: cocina_help
+theme: cocina
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  provider: help
+  label_display: '0'
+visibility: {  }

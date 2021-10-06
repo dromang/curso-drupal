@@ -1,0 +1,8 @@
+uuid: 2440197d-05a2-48d1-a1dd-20273dc379ec
+langcode: es
+status: true
+dependencies: {  }
+name: Ingredientes
+vid: ingredientes
+description: ''
+weight: 0

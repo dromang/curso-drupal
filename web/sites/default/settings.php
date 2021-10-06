@@ -828,7 +828,7 @@ $settings['trusted_host_patterns'] = array(
     'prefix' => '',
 ];
 
-$settings['config_sync_directory'] = '/mnt/files/config/sync_dir';
+$settings['config_sync_directory'] = '/var/www/html/config/default';
 $settings['hash_salt'] = 'cIEDeJsLsCHZF3NI';
 
 $settings['trusted_host_patterns'] = array(

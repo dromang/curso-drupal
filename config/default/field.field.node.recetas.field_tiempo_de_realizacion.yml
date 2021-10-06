@@ -1,0 +1,23 @@
+uuid: 8f080adc-1962-408a-b547-cc221cd2afd2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tiempo_de_realizacion
+    - node.type.recetas
+id: node.recetas.field_tiempo_de_realizacion
+field_name: field_tiempo_de_realizacion
+entity_type: node
+bundle: recetas
+label: 'Tiempo de realizacion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: minutos
+field_type: integer
