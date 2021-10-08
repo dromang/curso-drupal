@@ -3,17 +3,65 @@
 /**
  * Implements hook_form_alter().
  */
-function recetas_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+function recetas_core_form_node_recetas_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
 {
   //print_r($form);
-  $form['first_recipe'] = [
-    '#weight' => 100,
-    '#theme' =>'recetas_core_vars',
-    '#forums' =>t('hello'),
-    '#parents' =>'mundo',
-    '#tid' =>'blalballal',
+  $form["title"]["widget"][0]["value"]["#title"] = t('Recipe Name');
+  $form["title"]["widget"][0]["value"]["#description"] = t('The Name of the recipe');
+  $form["title"]["widget"][0]["value"]["#states"] = [
+    'visible' => [
+      ':input[name="langcode[0][value]"]' => ['value' => 'es']
+    ],
   ];
+
+  $form["title"]["widget"][0]["value"]["#ajax"] = [
+    'callback' => 'recetas_core_title_ajax_callback',
+    'event' => 'focus',
+  ];
+
+  $form["#validate"][] = 'recetas_core_add_validate';
+  $form["actions"]["submit"]["#submit"][2] = 'recetas_core_add_submit';
+  $form["field_ingredientes"]["widget"]["#ajax"] = [
+    'callback' => 'recetas_core_ajax_callback',
+    'wrapper' => 'edit-status-wrapper',
+    'effect' => 'fade',
+    'method' => 'replace',
+  ];
+  $form['#attached']['library'][] = 'recetas_core/example';
+  $form['#attached']['drupalSettings']['recetas_example'] = ['button_id' => '#edit-submit'];
+  return;
 }
+
+function recetas_core_add_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form_state->setError($form["title"]["widget"][0]["value"], 'No ha pasado la validacion ');
+  return;
+}
+
+function recetas_core_add_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  return;
+}
+
+function recetas_core_ajax_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+return [
+  '#type' => 'html_tag',
+  '#tag' => 'p',
+  '#value' => 'Hola',
+];
+}
+function recetas_core_title_ajax_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$respose = new \Drupal\Core\Ajax\AjaxResponse();
+ $p = [
+    '#type' => 'html_tag',
+    '#tag' => 'p',
+    '#value' => 'Hola',
+  ];
+//$respose->addCommand(new \Drupal\Core\Ajax\AlertCommand('Hola Mundo'));
+$respose->addCommand(new \Drupal\recetas_core\Ajax\ShowCommand('#edit-preview'));
+$respose->addCommand(new \Drupal\Core\Ajax\SettingsCommand(['recetas_example' => ['button_id'=> '#edit-preview']]));
+//$respose->addCommand(new \Drupal\Core\Ajax\InsertCommand('for=["edit-title-0-value"]', $p));
+return $respose;
+}
+
 
 /**
  * Implements hook_theme().
